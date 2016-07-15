@@ -1,0 +1,3 @@
+{{ ansible_managed | comment }}
+
+{{ krb_config | encode_ini(delimiter=" = ") }}

@@ -1,0 +1,14 @@
+---
+
+- name: Install krb package
+  package:
+    name: "{{ krb_pkg }}"
+  tags:
+    - krb_pkg
+
+- name: Create krb config file
+  template:
+    src: krb.conf.j2
+    dest: "{{ krb_config_file }}"
+  tags:
+    - krb_config
